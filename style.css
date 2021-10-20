@@ -233,3 +233,112 @@ svg {
     100% {opacity:1;}
   }
 
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 500px;
+        height: 90%;
+    }
+    .signature {
+        bottom: 0;
+    }
+    .player-0-panel, .player-1-panel {
+        width: 50%;
+        height: 50%;
+        padding: 0;
+    }
+    .player-name {
+        margin-top: 0;
+    }
+    .active .player-name::after {
+        content: "";
+    }
+    .dice {
+        top: 62%;
+        right: 35.5%;
+    }
+    .confettis {
+        top: 59%;
+        right: 30%;
+        height: 200px;
+    }
+    .btn-roll, .btn-hold, .btn-new {
+        left: 28.5%;
+    }
+    .btn-new {
+        top: 55%;
+    }
+    .btn-roll {
+        top: 83%;
+    }
+    .btn-hold {
+        top: 89%;
+    }
+}
+
+@media (max-width: 512px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .player-0-panel, .player-1-panel {
+        float: none;
+        width: 100%;
+        height: 50%;
+        padding: 0;
+    }
+    .player-name {
+        margin-top: 0;
+    }
+    .dice {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    .dice:hover {
+        transform: translate(50%, -50%);
+    }
+    .small {
+        display: none;
+    }
+    .btn-roll, .btn-hold, .btn-new {
+        width: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .btn-new {
+        left: 79%;
+    }
+    .btn-roll {
+        left: 6%;
+    }
+    .btn-hold {
+        left: 21%;
+    }
+    #name-0, #name-1 {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    #name-1 {
+        bottom: 0;
+    }
+    .player-score {
+        float: left;
+        padding-top: 120px;
+        padding-left: 55px;
+        margin-bottom: 20px;
+    }
+    .player-current-box {
+        float: right;
+        margin-top: 120px;
+        margin-right: 11px;
+    }
+    .confettis {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        height: 250px;
+    }
+}
