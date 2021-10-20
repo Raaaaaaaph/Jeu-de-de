@@ -84,8 +84,9 @@ body {
     font-size: 66px;
     position: absolute;
     color: #191919;
-    top: -77px;
-    right: 130px;
+    top: -140%;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .player-current-box {
@@ -154,9 +155,6 @@ svg {
 }
 
 .dice {
-    position: absolute;
-    right: 42.5%;
-    top: 178px;
     height: 150px;
     box-shadow: 0px 0px 30px #000000;
     border-radius: 22px;
@@ -178,6 +176,12 @@ svg {
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.dice-position {
+    position: absolute;
+    right: 42.5%;
+    top: 178px;
 }
 
 .confettis {
@@ -237,43 +241,44 @@ svg {
 
 @media (max-width: 1024px) {
     .wrapper {
-        width: 500px;
-        height: 90%;
+        width: 100%;
+        height: 80%;
     }
     .signature {
-        bottom: 0;
+        bottom: 1%;
     }
     .player-0-panel, .player-1-panel {
-        width: 50%;
-        height: 50%;
-        padding: 0;
+        padding: 30px;
+        height: 100%;
     }
     .player-name {
-        margin-top: 0;
+        margin-top: 50px;
     }
-    .active .player-name::after {
-        content: "";
-    }
-    .dice {
-        top: 62%;
-        right: 35.5%;
-    }
-    .confettis {
-        top: 59%;
-        right: 30%;
-        height: 200px;
+    .dice-position {
+        top: 30%;
+        right: 50%;
+        transform: translateX(50%);
     }
     .btn-roll, .btn-hold, .btn-new {
-        left: 28.5%;
+        transform: translateX(-50%);
     }
     .btn-new {
-        top: 55%;
+        left: 50%;
+        top: 5%;
     }
     .btn-roll {
-        top: 83%;
+        left: 50%;
+        top: 69%;
     }
     .btn-hold {
-        top: 89%;
+        left: 50%;
+        top: 81%;
+    }
+    .confettis {
+        top: 40%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        height: 280px;
     }
 }
 
@@ -291,13 +296,11 @@ svg {
     .player-name {
         margin-top: 0;
     }
-    .dice {
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
+    .active .player-name::after {
+        content: "";
     }
-    .dice:hover {
-        transform: translate(50%, -50%);
+    .dice-position {
+        top: 40%;
     }
     .small {
         display: none;
@@ -337,9 +340,7 @@ svg {
         margin-left: 41px;
     }
     .confettis {
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
+        top: 49%;
         height: 250px;
     }
 }
